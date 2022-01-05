@@ -52,7 +52,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             TextFormField(
                               keyboardType: TextInputType.emailAddress,
                               onChanged: (value) {
-                                email = value;
+                                setState(() {
+                                  email = value;
+                                });
                               },
                               validator: (value) {
                                 if (value!.isEmpty) {
@@ -77,7 +79,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                 }
                               },
                               onChanged: (value) {
-                                password = value;
+                                setState(() {
+                                  password = value;
+                                });
                               },
                               textAlign: TextAlign.center,
                               decoration: kTextFieldDecoration.copyWith(
