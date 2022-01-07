@@ -105,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                                     await Navigator.of(context).push(
                                       MaterialPageRoute(
-                                        builder: (contex) => HomeScreen(),
+                                        builder: (contex) => const HomeScreen(),
                                       ),
                                     );
 
@@ -116,14 +116,14 @@ class _LoginScreenState extends State<LoginScreen> {
                                     showDialog(
                                       context: context,
                                       builder: (ctx) => AlertDialog(
-                                        title: Text("Ops! Login Failed"),
+                                        title: const Text("Ops! Login Failed"),
                                         content: Text('${e.message}'),
                                         actions: [
                                           TextButton(
                                             onPressed: () {
                                               Navigator.of(ctx).pop();
                                             },
-                                            child: Text('Okay'),
+                                            child: const Text('Okay'),
                                           )
                                         ],
                                       ),
@@ -136,7 +136,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 }
                               },
                             ),
-                            SizedBox(height: 30),
+                            const SizedBox(height: 30),
                             GestureDetector(
                               onTap: () {
                                 Navigator.of(context).push(
@@ -147,17 +147,17 @@ class _LoginScreenState extends State<LoginScreen> {
                               },
                               child: Row(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "Don't have an Account ?",
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontSize: 20, color: Colors.black87),
                                   ),
-                                  SizedBox(width: 10),
-                                  Hero(
+                                  const SizedBox(width: 10),
+                                  const Hero(
                                     tag: '1',
                                     child: Text(
                                       'Sign up',
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 21,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.black),
